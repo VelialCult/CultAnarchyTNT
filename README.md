@@ -10,8 +10,10 @@ CultAnarchyTnT — это аддон для плагина CultAnarchyRegions, �
 
 📹 Несколько скришотов:
 
-2024-05-31_12.14.30.png
+![image](https://github.com/user-attachments/assets/221c2017-79b7-477f-ba64-8c7f50740b7c)
+
 
 🖥️ Пример конфигурации:
 
-1717607628803.png
+![image](https://github.com/user-attachments/assets/a5ad6b26-b9df-422e-bd5f-d6f8b32e2f78)
+
