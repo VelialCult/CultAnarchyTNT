@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 import ru.velialcult.library.bukkit.file.FileRepository;
 import ru.velialcult.library.bukkit.utils.ConfigurationUtil;
+import ru.velialcult.library.update.UpdateChecker;
 import ru.velialcult.tnt.command.CultAnarchyTnTCommand;
 import ru.velialcult.tnt.custom.manager.CustomTnTManager;
 import ru.velialcult.tnt.file.ConfigFile;
@@ -27,6 +28,9 @@ public class CultAnarchyTnT extends JavaPlugin {
 
             this.saveDefaultConfig();
             loadConfigs();
+
+            UpdateChecker updateChecker = new UpdateChecker(this, "CultAnarchyTNT");
+            updateChecker.check();
 
             customTnTManager = new CustomTnTManager(this);
             customTnTManager.initialize();
