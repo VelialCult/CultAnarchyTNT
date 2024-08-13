@@ -1,0 +1,11 @@
+name: CultAnarchyTnT
+main: ru.velialcult.tnt.CultAnarchyTnT
+version: '${project.version}'
+api-version: 1.16
+website: https://discord.gg/v7vE2wdRzx
+author: Nilsson03
+depend:
+  - CultAnarchyRegions
+  - CultLibrary
+commands:
+  cultanarchytnt:

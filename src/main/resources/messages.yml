@@ -1,0 +1,19 @@
+messages:
+  commands:
+
+    dont-have-permissions: "&#14d65c✘ &fУ вас недостаточно прав"
+    player-not-found: "&#14d65c✘ &fНе удалось найти игрока"
+    wrong-value: "&#14d65c✘ &fВы ввели неверное значение &a{value}"
+    help:
+      - '&#14d65c|'
+      - '&#14d65c| &fПерейти к настройкам - &a/cultpstnt settings'
+      - '&#14d65c| &fВыдать игроку динамит - &a/cultpstnt give <игрок> <динамит> <количество>'
+      - '&#14d65c|'
+    settings:
+      "&#14d65c➤ &fИспользуйте - &e/cultpstnt settings"
+    give:
+      info: "&#14d65c➤ &fВы получили динамит {tnt} &7(&6x{count}&7)"
+      give: "&#14d65c➤ &fВы успешно выдали игроку &a{player} &fдинамит {tnt} &7(&6x{count}&7)"
+      usage: "&#14d65c➤ &fИспользуйте - &e/cultpstnt give <игрок> <динамит> <количество>"
+      not-found: "&#14d65c✘ &fНе удалось найти динамит с ключём &a{value}"
+
