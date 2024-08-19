@@ -8,7 +8,7 @@ import org.bukkit.entity.EntityType;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataType;
-import ru.velialcult.anarchyregions.region.Region;
+import ru.velialcult.anarchyregions.api.region.Region;
 import ru.velialcult.tnt.CultAnarchyTnT;
 import ru.velialcult.tnt.custom.CustomTnTOptions;
 

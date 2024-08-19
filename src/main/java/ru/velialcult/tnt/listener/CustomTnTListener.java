@@ -13,10 +13,12 @@ import org.bukkit.event.entity.EntityExplodeEvent;
 import org.bukkit.event.entity.EntitySpawnEvent;
 import org.bukkit.inventory.ItemStack;
 import ru.velialcult.anarchyregions.CultAnarchyRegions;
-import ru.velialcult.anarchyregions.manager.RegionManager;
-import ru.velialcult.anarchyregions.region.Region;
-import ru.velialcult.anarchyregions.region.defend.DefendType;
-import ru.velialcult.anarchyregions.type.RegionType;
+import ru.velialcult.anarchyregions.api.AnarchyRegionsApi;
+import ru.velialcult.anarchyregions.api.defend.DefendType;
+import ru.velialcult.anarchyregions.api.manager.RegionManager;
+import ru.velialcult.anarchyregions.api.region.Region;
+import ru.velialcult.anarchyregions.api.region.RegionType;
+import ru.velialcult.tnt.CultAnarchyTnT;
 import ru.velialcult.tnt.custom.CustomTnT;
 import ru.velialcult.tnt.custom.CustomTnTMeta;
 import ru.velialcult.tnt.custom.CustomTnTOptions;
@@ -24,7 +26,6 @@ import ru.velialcult.tnt.custom.manager.CustomTnTManager;
 import ru.velialcult.tnt.listener.handler.BlockHandler;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -35,9 +36,13 @@ public class CustomTnTListener implements Listener {
 
     private final Map<Block, Location> blockLocationMap = new HashMap<>();
 
-    public CustomTnTListener(CustomTnTManager customTnTManager) {
+    private final AnarchyRegionsApi anarchyRegionsApi;
+
+    public CustomTnTListener(CultAnarchyTnT cultAnarchyTnT,
+                             CustomTnTManager customTnTManager) {
         this.customTnTManager = customTnTManager;
-        this.regionManager = CultAnarchyRegions.getInstance().getRegionManager();
+        this.anarchyRegionsApi = cultAnarchyTnT.getAnarchyRegionsApi();
+        this.regionManager = anarchyRegionsApi.getRegionManager();
     }
 
     @EventHandler
