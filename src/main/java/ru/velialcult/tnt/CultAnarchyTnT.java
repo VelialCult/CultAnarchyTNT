@@ -34,10 +34,12 @@ public class CultAnarchyTnT extends JavaPlugin {
 
             Plugin plugin = Bukkit.getPluginManager().getPlugin("CultAnarchyRegions");
             if (plugin == null) {
-                getLogger().warning(VersionAdapter.TextUtil().colorize("  &#DC143CОшибка! &fПлагин &#DC143CCultAnarchyRegions &fне найден, отключаю плагин!"));
+                getLogger().severe(VersionAdapter.TextUtil().colorize("  &#DC143CОшибка! &fПлагин &#DC143CCultAnarchyRegions &fне найден, отключаю плагин!"));
                 Bukkit.getPluginManager().disablePlugin(this);
             } else {
-                getLogger().warning(VersionAdapter.TextUtil().colorize("  &#00FF7F&lВсё готово! &fПлагин &#DC143CCultAnarchyRegions &fнайден, продолжаю загрузку!"));
+                getLogger().info(" ");
+                getLogger().info(VersionAdapter.TextUtil().colorize("  &#00FF7F&lВсё готово! &fПлагин &#DC143CCultAnarchyRegions &fнайден, продолжаю загрузку!"));
+                getLogger().info(" ");
                 anarchyRegionsApi = new AnarchyRegionsApi((CultAnarchyRegions) plugin);
             }
 
