@@ -25,9 +25,9 @@ public class SpawnerHandler {
 
     private void dropSpawner(Block block) {
         CreatureSpawner spawner = (CreatureSpawner) block.getState();
-        EntityType entity = spawner.getSpawnedType();
 
         ItemStack itemStack = new ItemStack(Material.SPAWNER);
+        EntityType entity = spawner.getSpawnedType();
         setSpawnerData(entity, itemStack);
         block.getWorld().dropItemNaturally(block.getLocation(), itemStack);
         block.setType(Material.AIR);
@@ -35,7 +35,7 @@ public class SpawnerHandler {
 
     private void setSpawnerData(EntityType entityType, ItemStack itemStack) {
         ItemMeta meta = itemStack.getItemMeta();
-        if (meta != null) {
+        if (meta != null && entityType != null) {
             NamespacedKey key = new NamespacedKey(CultAnarchyTnT.getInstance(), "spawnerdata");
             meta.getPersistentDataContainer().set(key, PersistentDataType.STRING, entityType.name());
             itemStack.setItemMeta(meta);
